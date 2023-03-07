@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/input.css" /> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="page-container" class="lg:h-screen max-w-[1500px] flex flex-col lg:flex-row">
+        <section class="bg-[#5FCB71] sticky top-0 z-50">
+            <header class="flex items-center lg:hidden p-6">
+                <span id="menu" class="justify-self-start lg:hidden text-white text-2xl cursor-pointer">&#9776;</span>
+                <h1 class="text-3xl font-bold text-white mx-auto">
+                    <a class="cursor-pointer" href="/">Jeet's Blog</a>
+                </h1>
+            </header>
+            <aside id="blogProfile"
+                class="w-full md:w-[600px] hidden mx-auto lg:w-72 lg:h-screen lg:bg-[#5FCB71] lg:block text-center pt-0 p-5 lg:fixed top-0 left-0">
+                <header class="hidden items-center lg:flex">
+                    <span class="justify-self-start lg:hidden text-white text-2xl cursor-pointer">&#9776;</span>
+                    <h1 class="text-3xl font-bold text-white mx-auto">
+                        <a href="/">Jeet's Blog</a>
+                    </h1>
+                </header>
+                <section id="profile" class="text-white">
+                    <img src="https://scontent.fisb13-1.fna.fbcdn.net/v/t1.6435-9/47572797_2392399334135258_714054797044482048_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=KR19o1xm8dcAX-pFj48&_nc_ht=scontent.fisb13-1.fna&oh=00_AfBUjgW4SZTqGOwqG62iUYXqzhZ0lTVY1K64EDF-ER4n9A&oe=642BA867"
+                        alt="my-image"
+                        class="rounded-[50%] w-[150px] h-[150px] m-auto lg:mt-10 mb-6 shadow-2xl shadow-slate-700 object-cover" />
+                    <p class="text-sm font-normal font-sans">
+                        Greetings, I am Jeet Kumar Ramnani, an IT student actively engaged
+                        in studying and practicing contemporary web technologies.
+                    </p>
+
+                    <div id="social-links" class="mt-5 mb-5">
+                        <ul class="flex list-none gap-4 justify-center">
+                            <li class="w-6 h-6 rounded-[50%] bg-white text-black flex items-center justify-center">
+                                <a href="#"><i class="fab fa-twitter fa-fw"></i></a>
+                            </li>
+                            <li class="w-6 h-6 rounded-[50%] bg-white text-black flex items-center justify-center">
+                                <a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a>
+                            </li>
+                            <li class="w-6 h-6 rounded-[50%] bg-white text-black flex items-center justify-center">
+                                <a href="#"><i class="fab fa-github-alt fa-fw"></i></a>
+                            </li>
+                            <li class="w-6 h-6 rounded-[50%] bg-white text-black flex items-center justify-center">
+                                <a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a>
+                            </li>
+                            <li class="w-6 h-6 rounded-[50%] bg-white text-black flex items-center justify-center">
+                                <a href="#"><i class="fab fa-codepen fa-fw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="bg-slate-400 opacity-50" />
+                </section>
+                <nav class="nav mt-5 text-white">
+                    <div class="nav-links flex justify-center">
+                        <ul class="list-none text-start">
+                            <li class="mb-2 font-bold"><a href="/">Home Page</a></li>
+                            <li class="mb-2 font-bold"><a href="#">About Me</a></li>
+                            <li class="mb-3 font-bold"><a href="#">Contact Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-btn">
+                        <button class="font-bold p-5 pt-2 pb-2 bg-[rgba(0,0,0,0.3)] rounded-lg">
+                            Get in Touch
+                        </button>
+                    </div>
+                </nav>
+            </aside>
+        </section>
+        <main id="main-container" class="mx-auto w-full lg:ml-[290px]">
+            <section id="posts-section" class="bg-[#fafafa] px-5 pb-10 text-center w-full mx-auto">
+                <article class="article-1 my-10 w-full">
+                    <img src="https://res.cloudinary.com/dmsxwwfb5/image/upload/v1595866967/full-stack-devlopment-min.png"
+                        alt="full stack development" class="w-full mb-10" />
+                    <div class="post-details text-start w-full">
+                        <h1 class="text-4xl font-semibold mb-3 text-center">
+                            A Guide to Becoming a Full-Stack Developer
+                        </h1>
+                        <p class="my-5 text-justify mx-auto">
+                            As technology continues to evolve, the demand for full-stack developers is increasing
+                            rapidly. Full-stack developers are those who can work with both front-end and back-end
+                            technologies, as well as have a strong understanding of databases and server-side
+                            architecture. If you're interested in becoming a full-stack developer, here's a guide to
+                            help you get started.
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">1. Learn the Fundamentals of
+                                Programming</span>
+                            Before you can become a full-stack developer, you need to have a strong foundation in
+                            programming. This includes understanding concepts such as data structures, algorithms, and
+                            programming paradigms. You can learn these fundamentals by taking online courses, reading
+                            books, or attending coding bootcamps.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">2. Choose a Programming Language</span>
+                            Once you have a strong foundation in programming, it's time to choose a programming language
+                            to specialize in. Some popular languages for full-stack development include JavaScript,
+                            Python, and Ruby. Each language has its own set of advantages and disadvantages, so it's
+                            important to choose one that aligns with your goals.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">3. Learn Front-End Development</span>
+                            Front-end development involves building the user interface of a website or application. This
+                            includes HTML, CSS, and JavaScript. To become a full-stack developer, you need to have a
+                            strong understanding of these technologies, as well as front-end frameworks such as React,
+                            Angular, and Vue.js.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">4. Learn Back-End Development</span>
+                            Back-end development involves building the server-side of a website or application. This
+                            includes programming languages such as Node.js, Ruby on Rails, and Django. You also need to
+                            have a strong understanding of databases such as MySQL, MongoDB, and PostgreSQL.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">5. Practice Building Applications</span>
+                            The best way to become a full-stack developer is to practice building applications. This can
+                            include building your own projects or contributing to open-source projects. By building
+                            applications, you'll gain practical experience and learn how to solve real-world problems.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">6. Continuously Learn and Stay
+                                Up-to-Date</span>
+                            Technology is constantly evolving, so it's important to continuously learn and stay
+                            up-to-date with the latest trends and technologies. This can include attending conferences,
+                            reading industry blogs, and following thought leaders on social media.
+
+                            <br />
+                            <br />
+
+                            <span class="text-2xl font-semibold block my-5">7. Build Your Portfolio</span>
+                            Finally, to showcase your skills and attract potential employers, it's important to build
+                            your portfolio. This can include your own website, projects you've worked on, and
+                            contributions to open-source projects. Having a strong portfolio can help you stand out from
+                            other candidates and land your first job as a full-stack developer.
+
+                            <br />
+                            <br />
+                            <span class="text-2xl font-semibold block my-5">Conclusion</span>
+                            In conclusion, becoming a full-stack developer requires a strong foundation in programming,
+                            a specialization in a programming language, a deep understanding of front-end and back-end
+                            development, practical experience building applications, and continuous learning. By
+                            following this guide, you can become a successful full-stack developer and advance your
+                            career in the technology industry.
+
+                            <br />
+                            <br />
+
+                        </p>
+                        <a class="underline text-[#5FCB71] mx-auto block text-right" href="./article-3.html">Next
+                            Article</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const menuEl = document.getElementById("menu");
+        const profileContainer = document.getElementById("blogProfile");
+
+        console.log(menuEl, profileContainer);
+
+        menuEl.addEventListener("click", function () {
+            profileContainer.classList.toggle("hidden");
+            // if (profileContainer.style.display === "block") {
+            //     profileContainer.style.display = "none";
+            // } else {
+            //     profileContainer.style.display = "block";
+            // }
+        });
+    </script>
+</body>
+
+</html>
