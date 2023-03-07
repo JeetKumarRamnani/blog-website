@@ -15,17 +15,17 @@
 </head>
 
 <body>
-    <div id="page-container" class="h-screen max-w-[1500px] flex flex-col lg:flex-row">
-        <section class="bg-[#5FCB71]">
+    <div id="page-container" class="lg:h-screen max-w-[1500px] flex flex-col lg:flex-row">
+        <section class="bg-[#5FCB71] sticky top-0">
             <header class="flex items-center lg:hidden p-6">
                 <span id="menu" class="justify-self-start lg:hidden text-white text-2xl cursor-pointer">&#9776;</span>
-                <h1 class="text-3xl font-bold text-white mx-auto">Jeet's Blog</h1>
+                <h1 class="text-3xl font-bold text-white mx-auto sticky top-0  z-50 "><a href="/">Jeet's Blog</a></h1>
             </header>
             <aside id="blogProfile"
-                class="w-full md:w-[600px] hidden mx-auto lg:w-72 lg:h-screen lg:bg-[#5FCB71] lg:block text-center pt-0 p-5 lg:fixed top-0 left-0">
+                class="w-full md:w-[600px] hidden mx-auto lg:w-72 lg:h-screen lg:bg-[#5FCB71] lg:block text-center pt-0 p-5 lg:fixed lg:top-0 lg:left-0">
                 <header class="hidden items-center lg:flex">
                     <span class="justify-self-start lg:hidden text-white text-2xl cursor-pointer">&#9776;</span>
-                    <h1 class="text-3xl font-bold text-white mx-auto">Jeet's Blog</h1>
+                    <h1 class="text-3xl font-bold text-white mx-auto"><a href="/">Jeet's Blog</a></h1>
                 </header>
                 <section id="profile" class="text-white">
 
@@ -62,9 +62,9 @@
                 <nav class="nav mt-5 text-white">
                     <div class="nav-links flex justify-center">
                         <ul class="list-none  text-start">
-                            <li class="mb-2 font-bold"><a href="#">Blog Home</a></li>
-                            <li class="mb-2 font-bold"><a href="#">Blog Post</a></li>
-                            <li class="mb-3 font-bold"><a href="#">About Me</a></li>
+                            <li class="mb-2 font-bold"><a href="/">Home Page</a></li>
+                            <li class="mb-2 font-bold"><a href="#">About Me</a></li>
+                            <li class="mb-3 font-bold"><a href="#">Contact Me</a></li>
                         </ul>
                     </div>
                     <div class=" nav-btn">
@@ -86,11 +86,12 @@
                     <img src="https://themes.3rdwavemedia.com/demo/bs5/devblog/assets/images/blog/blog-post-thumb-1.jpg"
                         alt="progammer programing" width="130px" height="130px">
                     <div class="post-details text-start">
-                        <h3 class="text-2xl font-semibold mb-3">Arithimatic Operators In Javascript</h3>
+                        <h3 class="text-2xl font-semibold mb-3"><a href="./post-1.html">Arithimatic Operators In
+                                Javascript</a></h3>
                         <p class="mb-2">JavaScript has several arithmetic operators that allow you to perform
                             mathematical operations
                             on numbers. These operators include: Addition (+): Adds two or more numbers together....</p>
-                        <a href="#" class="underline text-[#5FCB71]">Read More</a>
+                        <a href="http://127.0.0.1:3000/post-1.html" class="underline text-[#5FCB71]">Read More</a>
                     </div>
                 </article>
                 <article class="article-2 flex gap-7 items-start my-10">
@@ -148,6 +149,8 @@
             //     profileContainer.style.display = "block";
             // }
         })
+
+        document.querySelector("header").style.position = "sticky";
     </script>
 
 </body>
