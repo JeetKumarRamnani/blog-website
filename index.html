@@ -12,6 +12,7 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
 </head>
 
 <body>
@@ -20,6 +21,10 @@
             <header class="flex items-center lg:hidden p-6">
                 <span id="menu" class="justify-self-start lg:hidden text-white text-2xl cursor-pointer">&#9776;</span>
                 <h1 class="text-3xl font-bold text-white mx-auto sticky top-0  z-50 "><a href="/">Jeet's Blog</a></h1>
+
+                <span id="darkLightToggler"
+                    class="justify-self-start lg:hidden text-white text-2xl cursor-pointer w-7"><img
+                        src="/night-mode.png" alt="darkNightToggler"></span>
             </header>
             <aside id="blogProfile"
                 class="w-full md:w-[600px] hidden mx-auto lg:w-72 lg:h-screen lg:bg-[#5FCB71] lg:block text-center pt-0 p-5 lg:fixed lg:top-0 lg:left-0">
@@ -139,6 +144,9 @@
     <script>
         const menuEl = document.getElementById("menu");
         const profileContainer = document.getElementById("blogProfile");
+        const darkLightToggler = document.querySelector("#darkLightToggler");
+
+        let darkMode = false;
 
         console.log(menuEl, profileContainer)
 
@@ -152,6 +160,29 @@
         })
 
         document.querySelector("header").style.position = "sticky";
+
+
+        darkLightToggler.addEventListener("click", () => {
+            darkMode = !darkMode;
+            console.log(darkMode)
+            document.querySelector("#main-container").classList.toggle("bg-[#333]")
+            document.querySelector("#top-section ").classList.toggle("bg-[#333]")
+            document.querySelector("#top-section > h2 ").classList.toggle("text-white")
+            document.querySelector("#top-section > p ").classList.toggle("text-white")
+            document.querySelector("#page-container > section ").classList.toggle("bg-[#333]")
+            document.querySelector("#page-container > section ").classList.toggle("shadow-lg")
+            document.querySelector("#posts-section").classList.toggle("bg-[#333]")
+            for (let indEl of document.querySelectorAll("#posts-section > article")) {
+                indEl.classList.toggle("text-white")
+                indEl.classList.toggle("border")
+                indEl.classList.toggle("p-5")
+                indEl.classList.toggle("shadow-lg")
+
+
+            }
+            darkLightToggler.querySelector("img").src = `${darkMode ? "light.png" : "night-mode.png"}`;
+
+        })
     </script>
 
 </body>
